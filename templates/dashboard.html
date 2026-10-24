@@ -1,0 +1,11 @@
+<!DOCTYPE html><html><head><title>Dashboard</title>
+<style>body{font-family:Arial;background:#0f172a;color:white;padding:20px}
+.card{background:#1e293b;padding:20px;border-radius:12px;margin:10px 0}
+.log{font-size:12px;background:#0f172a;padding:8px;margin:4px 0;border-radius:5px;font-family:monospace}
+.btn{background:#ef4444;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;display:inline-block}
+</style></head><body>
+<h1>✅ Welcome {{user}}!</h1>
+<div class="card"><h3>🔒 Security System Active</h3><p>Brute-force protection enabled. All lockouts logged.</p><a href="/logout" class="btn">Logout</a></div>
+<h3>Full Security Logs ({{logs|length}})</h3>
+<div class="card">{% for l in logs %}<div class="log">{{l}}</div>{% endfor %}</div>
+</body></html>
